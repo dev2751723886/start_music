@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/miaomiao">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginLeft="20dp"
+        android:text="我喜欢"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/love_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp" />
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我创建的歌单卡片：缩小版竖版卡片，左对齐（不居中） -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="6dp"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/white_round_bg">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:src="@drawable/beizi"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/RoundedImageShape"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:padding="4dp"
+        android:text="歌单"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFF" />
+
+    <TextView
+        android:id="@+id/much"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="146dp"
+        android:padding="6dp"
+        android:text="0首"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#FFFF" />
+
+    <ImageView
+        android:id="@+id/user_home_play_music_run"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/br"
+        android:scaleType="centerCrop"
+        android:layout_alignEnd="@id/img"
+        android:layout_alignBottom="@id/img"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="10dp" />
+</RelativeLayout>

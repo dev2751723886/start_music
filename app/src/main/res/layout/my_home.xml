@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">  <!-- 让所有子元素水平居中 -->
+
+        <ImageView
+            android:id="@+id/toux"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/photo"
+            android:background="@drawable/circle_backgound" />
+
+        <TextView
+            android:id="@+id/nic"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="昵称"
+            android:textColor="#F8F7F7"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <!-- 外层：水平排列，包裹三个小块 -->
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal" >
+
+            <!-- 第一组：图片 + 文字 -->
+            <LinearLayout
+                android:id="@+id/music_kaujie"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/music_zuij"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/zuij" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最近播放"
+                    android:textSize="15sp"
+                    android:textColor="#F8F7F7"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/music_kaujie1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/music_time"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/zuij" />
+
+                <TextView
+                    android:id="@+id/music_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="播放时长"
+                    android:textSize="15sp"
+                    android:textColor="#F8F7F7"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- 第二组：图片 + 文字 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/music_dele"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/delet" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="删除"
+                    android:textSize="15sp"
+                    android:textColor="#F4F2F2"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- 第三组：图片 + 文字 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/music_dow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/dow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下载"
+                    android:textSize="15sp"
+                    android:textColor="#F0EEEE"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 我创建的歌单标题 + 创建按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="我创建的歌单"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#F6F3F3" />
+
+            <TextView
+                android:id="@+id/btn_create_sheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ 创建歌单"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#EB87C3" />
+        </LinearLayout>
+
+        <!-- 我创建的歌单列表（纵向，数量少，交给外层 ScrollView 滚动） -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/music_ged"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+        <!-- 我喜欢的歌曲 + 音乐热榜（纵向两行） -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/music_mune"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
+    </LinearLayout>
+</ScrollView>

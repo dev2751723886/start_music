@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dpp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/f" />
+
+    <EditText
+        android:id="@+id/zhanghao"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edit_logn_bg"
+        android:drawableLeft="@drawable/penci"
+        android:drawablePadding="20dp"
+        android:hint="请输入账号"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFB6C1" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_logn_bg"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="20dp"
+        android:hint="请输入密码"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="#DCDCDC"
+        android:textColorHint="#FFB6C1"
+        android:inputType="textPassword"/>
+
+    <!-- 外层容器：让两个按钮水平并排 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!-- 登录按钮 -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="60dp"
+            android:backgroundTint="#FFB6C1"
+            android:text="登录"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF" />
+
+        <!-- 注册按钮：左边加间距，不然会粘在一起 -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:backgroundTint="#FFB6C1"
+            android:text="注册"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

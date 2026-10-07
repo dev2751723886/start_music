@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_logn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="0dp"
+        android:gravity="center_vertical"> <!-- 垂直方向上对齐中心线 -->
+
+        <!-- 1. 图片 -->
+        <ImageView
+            android:id="@+id/music_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/beizi" />
+
+        <!-- 2. 歌名 -->
+        <TextView
+            android:id="@+id/music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="歌名"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FAFAFA" />
+
+        <!-- 3. 歌手（占满剩余空间，把删除按钮挤到最右） -->
+        <TextView
+            android:id="@+id/music_singer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="歌手"
+            android:textSize="14sp"
+            android:textColor="#FBFBFB" />
+
+        <!-- 4. 收藏按钮（默认隐藏，歌曲列表里显示） -->
+        <ImageView
+            android:id="@+id/music_love"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/music_star"
+            android:visibility="gone" />
+
+        <!-- 5. 删除按钮（默认隐藏，歌单详情里显示） -->
+        <ImageView
+            android:id="@+id/music_del"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/delet"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

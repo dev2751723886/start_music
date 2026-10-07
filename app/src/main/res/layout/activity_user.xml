@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/miaomiao"
+    tools:context=".activity.yonghu.UserActivity">
+
+    <!-- 控件放这里 -->
+    <FrameLayout
+
+        android:id="@+id/man_manage_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    <include layout="@layout/player_bar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/user_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DEEB83C5"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#F2EDF0"
+        android:layout_marginTop="5dp"
+        app:menu="@menu/menu_user_bottom_menu" />
+
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pess"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C7FFD1DC"
+        app:titleTextColor="#C4FFFFFF"
+        app:title="注册账号"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:navigationIcon="@drawable/back" />
+
+    <ImageView
+        android:id="@+id/touxiang"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/photo"
+        android:background="@drawable/circle_backgound" />
+
+    <EditText
+        android:id="@+id/nicheng"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_logn_bg"
+        android:drawableLeft="@drawable/penci"
+        android:drawablePadding="20dp"
+        android:hint="请输入昵称"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFB6C1" />
+
+    <EditText
+        android:id="@+id/zhanghao"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_logn_bg"
+        android:drawableLeft="@drawable/penci"
+        android:drawablePadding="20dp"
+        android:hint="请输入账号"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFB6C1" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_logn_bg"
+        android:drawableLeft="@drawable/lock"
+        android:drawablePadding="20dp"
+        android:hint="请输入密码"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="#DCDCDC"
+        android:textColorHint="#FFB6C1"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/dizhi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_logn_bg"
+        android:drawableLeft="@drawable/penci"
+        android:drawablePadding="20dp"
+        android:hint="请输入地址"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFB6C1" />
+
+    <RadioGroup
+        android:id="@+id/register_man"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="55dp"
+        android:paddingEnd="55dp">
+
+        <RadioButton
+            android:id="@+id/boy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="男"
+            android:layout_marginEnd="16dp"
+            android:textColor="#333333"
+            android:background="@drawable/sex_check_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp" />
+
+        <RadioButton
+            android:id="@+id/girl"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="女"
+            android:textColor="#333333"
+            android:background="@drawable/sex_check_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp" />
+    </RadioGroup>
+
+    <!-- 注册按钮：左边加间距，不然会粘在一起 -->
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/RegisterT"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#B8FFB6C1"
+        android:text="注册"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

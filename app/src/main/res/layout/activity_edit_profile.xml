@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/miaomiao">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="编辑资料"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FF000000" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/edit_avatar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/photo"
+        android:background="@drawable/circle_backgound" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="点击更换头像"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/edit_nick"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:hint="昵称"
+        android:textSize="16sp"
+        android:background="@drawable/edit_logn_bg"
+        android:paddingStart="15dp" />
+
+    <EditText
+        android:id="@+id/edit_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="新密码（不填则不修改）"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        android:background="@drawable/edit_logn_bg"
+        android:paddingStart="15dp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:text="保存"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/edit_logn_bg" />
+</LinearLayout>

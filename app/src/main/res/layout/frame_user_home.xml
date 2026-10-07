@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#EB87C3"> <!-- 你的背景色 -->
+
+        <!-- 把 SearchView 放在 Toolbar 内部 -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/man_home_music_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            app:iconifiedByDefault="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sex_check_bg"
+            app:queryHint="搜索歌名或歌手" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="推荐歌单 &gt;"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#FFFFFF"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_mune"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="0dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="音乐热榜 &gt;"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/music_music_chat"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="0dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+</LinearLayout>
